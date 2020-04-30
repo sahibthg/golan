@@ -1,7 +1,7 @@
 func remoteRun(host,cmd,secret string ) string {
         user := os.Getenv("LOGNAME")
         whoami := os.Getenv("USER")
-        command := cmd+" "+secret
+        command := cmd
 
         key, err := ioutil.ReadFile("/home/"+whoami+"/.ssh/id_rsa")
         if err != nil {
